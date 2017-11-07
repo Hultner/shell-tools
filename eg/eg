@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+eg () {
+    man "$1" | \
+    grep '^E.EX.XA' -A 1000 | \
+    grep '^[A-Z]' -m 2 -B 1000 -A 0 | sed '$d' |\
+    more
+}
+eg "$1"

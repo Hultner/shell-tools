@@ -1,3 +1,6 @@
 [submodule "timestamp"]
 	path = timestamp
 	url = git@github.com:Hultner/timestamp.git
+[submodule "pasteBuffer"]
+	path = pasteBuffer
+	url = git@github.com:Hultner/pasteBuffer.git

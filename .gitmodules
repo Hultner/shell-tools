@@ -1,0 +1,3 @@
+[submodule "timestamp"]
+	path = timestamp
+	url = git@github.com:Hultner/timestamp.git

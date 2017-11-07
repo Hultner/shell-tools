@@ -1,0 +1,12 @@
+#!/usr/bin/env sh
+
+mkv2atv(){ 
+    echo $1
+    ffmpeg -i $1 -vcodec copy -acodec aac -movflags +faststart ${1%.*}.mp4; 
+}
+
+for file
+do
+    mkv2atv $file
+done
+

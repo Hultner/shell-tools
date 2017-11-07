@@ -1,0 +1,16 @@
+#!/usr/bin/env sh
+
+# Quick Look command line interface
+# Levrages Quick Look Server debug and management tool
+# while adding a more sane interface for cli usage.
+#
+# Author: Alexander Hultnér
+# Date: 2009-10-11
+# 
+# Usage: ql filename
+#
+# Example usage:
+# ql picture.png
+# ql movies.mp4
+
+qlmanage -p $1 > /dev/null 2>&1

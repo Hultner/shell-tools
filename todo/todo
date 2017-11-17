@@ -1,0 +1,17 @@
+#!/usr/bin/env sh 
+
+# TODO Finder
+# Author: Alexander Hultnér 2017-11-17
+#
+# Looks through the repository for TODOs, lists them along side information 
+# about when, in what commit and by who they were added so one can ask them
+# for clarifications if needed.
+#
+# Usage:
+# ./todo.sh
+
+
+git grep -l TODO ':(exclude)todo.sh' \
+     | xargs -n1 git blame -f -n -w \
+     | grep TODO \
+     | perl -pe 's/(.{9})(.*?)\s+\d+ \((.+) (\d+)\)\s*(\#.*)/$2:$4\n- $3\ @ $1\n$5\n/'

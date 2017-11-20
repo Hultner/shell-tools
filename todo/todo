@@ -10,6 +10,11 @@
 # Usage:
 # ./todo.sh
 
+# Future improvements:
+# Other comment block style, i.e. """, --, //, /*, /**, =, ', (*, %, %{, --[[,
+# C, !*, <!--, 
+# As well as other comment tags i.e. BUG, FIXME, HACK, UNDONE, XXX, TODO
+# Shell script for protability.
 
 git grep -l TODO ':(exclude)todo.sh' \
      | xargs -n1 git blame -f -n -w \
